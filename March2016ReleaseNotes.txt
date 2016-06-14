@@ -1,0 +1,160 @@
+
+Affected Files
+
+
+Storefront
+app/index.html 
+app/js/app.js
+app/js/controllers/navCtrl.js 
+app/js/controllers/specFormCtrl.js
+app/js/controllers/userEditCtrl.js
+app/js/directives/ordershipping.js
+app/js/services/orderConfigService.js 
+app/js/services/orderService.js
+app/js/services/productService.js
+app/lib/oc/ordercloud-specforms.js
+app/partials/branding.html
+app/partials/checkOutView.html 
+app/partials/controls/addressInput.html
+app/partials/controls/login.html
+app/partials/controls/orderBilling.html
+app/partials/controls/orderDetails.html
+app/partials/controls/staticspecs.html
+app/partials/Security/security-en-US.html 
+app/partials/Security/security-es-MX.html
+
+Product Detail Template Catalog
+Image Right Accordion View 
+Image Right Tabbed View 
+Image Right View 
+One Column Accordion View 
+One Column Tabbed View 
+One Column View 
+Tabbed View 
+Three Column Accordion View 
+Three Column Tabbed View 
+Three Column View
+
+
+1. Addresses
+State is no longer required for non US address.
+
+Changed Files:
+app/partials/controls/addressInput.html
+
+2.  Addresses
+Edit Ship First/Last Name Editable - Only gets applied to first line item on order.
+
+Changed Files:
+app/js/directives/ordershipping.js
+
+3.  Branding
+Clicking the company logo as a buyer user results in an unnecessary page refresh. (store.clear)
+
+Changed Files:
+app/js/controllers/navCtrl.js 
+app/partials/branding.html
+
+4. Checkout
+Error Messages Are Blank for Edit First and Last Name for Billing.
+
+Changed Files:
+app/partials/checkOutView.html 
+app/partials/controls/orderBilling.html
+
+5.  File Spec Type
+Default file not getting set as spec value for a variable spec with a spec type of file.
+
+Changed Files:
+app/js/services/productService.js
+
+6. Multiple Shipping
+Line items that do not have a Shipper Name or Shipper ID produce a console error.
+
+Changed Files:
+app/js/directives/ordershipping.js
+
+7.  OC Spec Forms
+Additional Spec Form Directives have been added to the OrderCloud Storefront Application.
+
+Changed Files:
+app/index.html 
+app/js/app.js 
+app/lib/oc/ordercloud-specforms.js
+
+8.  Order Details
+Cost center label does not display when zero cost centers have been assigned.
+
+Changed Files:
+app/js/services/orderConfigService.js 
+app/partials/controls/orderDetails.html
+
+9.  Password Reset
+Reset password is supported if it expires or no longer meets security requirements.
+
+Changed Files:
+app/partials/controls/login.html
+
+10.  Product Detail UI
+The Specifications section no longer appears when the value for "Visible to Customer" is false, and there are not other specs that have "Visible to Customer" set to true.
+
+Changed Files:
+app/js/services/productService.js 
+app/partials/controls/staticspecs.html
+
+11. Product Detail UI
+The Specifications (Static Spec Groups ) Panel is hidden when all specs are configured with "Visible to Customer" set to false.
+
+Changed Files:
+app/js/services/productService.js 
+app/partials/controls/staticspecs.html
+
+12.  Product Detail Template
+Usability updates for specific views.
+
+Changed Files:
+Image Right Accordion View 
+Image Right Tabbed View 
+Image Right View 
+One Column Accordion View 
+One Column Tabbed View 
+One Column View 
+Tabbed View 
+Three Column Accordion View 
+Three Column Tabbed View 
+Three Column View
+
+13.  Project File Uploads
+PNG files are supported for Pageflex Project uploads.
+
+14.  Security
+Updated verbiage in the Site Security paragraph.
+
+Changed Files:
+app/partials/Security/security-en-US.html 
+app/partials/Security/security-es-MX.html
+
+15.  Site Access
+Navigating to Identify User/Logon Page from Link Builder Link fails to load page.
+
+Changed Files:
+app/js/controllers/userEditCtrl.js
+
+16.  Spending Accounts
+
+When using a spending account as a payment method, the balance does not calculate correctly when Account Type is configured for a value less than 100 for the Max Percentage of Order Payable From Account.
+
+Changed Files:
+app/js/services/orderService.js
+
+17.  Static Specs
+Specifications table now displays within the product variant view.
+
+Changed Files:
+app/partials/controls/staticspecs.html
+
+18.  Variable Specs
+The default value for a variable spec displays "Null" when the default value for the spec is a Custom User Field without a value.
+
+Changed Files:
+app/js/controllers/specFormCtrl.js
